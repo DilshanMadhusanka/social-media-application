@@ -325,12 +325,9 @@ function App (){
 }
 */
 
-
-
 // useEFFECT hook
 
 //we have ti import useEffect
-
 
 /*
 
@@ -369,15 +366,43 @@ function App() {
 
 */
 
+// fetching data from catfact website
+
+/*
+
+function App (){
+
+fetch("https://catfact.ninja/fact").then((res)=>
+  res.json()
+).then((data)=>{
+  console.log(data);
+});
+
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+*/
+
+// to fectch the data we can use Axios library
+
+import axios, { Axios } from "axios"; 
+
 function App(){
 
-  Axios.get().then ((res)=>{
-    console.log(res.data);
-  })
+Axios.get("https://catfact.ninja/fact").then((res)=>{
+  console.log(res.data);
+});
+
   return (
     <div>
 
     </div>
   )
 }
+
+
 export default App;
